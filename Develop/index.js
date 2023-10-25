@@ -53,9 +53,10 @@ const questions = [
                 name: 'credit'
             },
             {
-                type: 'input',
+                type: 'list',
                 message: 'What license did you use for your application?',
-                name: 'license'
+                name: 'license',
+                choices: ['MIT', 'Apache 2.0', 'GPL 3.0', 'None']
             },
             {
                 type: 'input',
@@ -64,45 +65,19 @@ const questions = [
             }
          ])
          .then((data) =>
-         console.log(data))
+        //  console.log(data),
+         init(data)
+         )
 ];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    fs.writeFile('README.md', null, (error) => error ? console.error(error) : console.log("Success!"))
+    fs.writeFile('README.md', data, (error) => error ? console.error(error) : console.log("Success!"))
 }
 
 // TODO: Create a function to initialize app
-function init() {
-    writeToFile(),
-    fs.appendFile('README.md', 
-        `# Weather
-
-
-        ![Alt text](/${data.link})
-
-
-        # Description
-        ${data.motivation}
-        ${data.build}  
-        ${data.problem}
-        ${learn}
-
-        # Installation
-        ${data.install}
-
-        # Usage
-        ${data.usage}
-
-        # Credits
-        ${data.credit}  
-
-        # License
-        I used the ${data.license} license.
-
-        # Deployed link
-        ${daya.deploy} `
-)
+function init(data) {
+    writeToFile('README.md', )
 }
 
 // // Function call to initialize app
