@@ -36,7 +36,9 @@ function renderLicenseSection(data) {
   if (data.license === 'None') {
     return '';
   }
-  return `## License\n\nThis project is licensed under the [${renderLicenseBadge(data)}] ${data.license} License](${renderLicenseLink}) - see the [${renderLicenseBadge(data)}] ${data.license} License] file for details.`
+  const licenseBadge = renderLicenseBadge(data);
+  const licenseLink = renderLicenseLink(data)
+  return `This project is licensed under the [${licenseBadge}] (${licenseLink}) - see the [${licenseBadge}] License file for details.`
 }
 
 // TODO: Create a function to generate markdown for README
@@ -63,7 +65,7 @@ function generateMarkdown(data) {
   ${data.credit}  
   
   # License
-  ${renderLicenseSection(data.license)}.
+  ${renderLicenseSection(data)}.
   
   # Deployed link
   ${data.deploy} `
