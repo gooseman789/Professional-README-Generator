@@ -2,13 +2,13 @@
 // If there is no license, return an empty string
 function renderLicenseBadge(data) {
   if (data.license === 'MIT') {
-    return 'https://img.shields.io/badge/License-MIT-yellow.svg'
+    return '![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)'
   } else if 
   (data.license === 'Apache 2.0') {
-    return 'https://img.shields.io/badge/License-Apache%202.0-blue.svg'
+    return '![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)'
   } else if
   (data.license === 'GPL 3.0') {
-    return 'https://img.shields.io/badge/License-GPL%203.0-blue.svg'
+    return '![License: GPL 3.0](https://img.shields.io/badge/License-GPL%203.0-blue.svg)'
   } else {
     return ''
   }
@@ -38,7 +38,7 @@ function renderLicenseSection(data) {
   }
   const licenseBadge = renderLicenseBadge(data);
   const licenseLink = renderLicenseLink(data)
-  return `This project is licensed under the [${licenseBadge}] (${licenseLink}) - see the [${licenseBadge}] License file for details.`
+  return `This project is licensed under the [${licenseBadge}](${licenseLink}) - see the [${licenseBadge}] License file for details.`
 }
 
 // TODO: Create a function to generate markdown for README
