@@ -47,7 +47,15 @@ function generateMarkdown(data) {
   return `# ${data.title}
 
   ![Alt text](/${data.link})
+  Created by ${data.name}, who is also known as ${data.GHname} on [Github.com](${data.GHlink})
 
+  # Table of Contents
+  [Description](#Description)
+  [Description](#Installation)
+  [Usage](#Usage)
+  [Credits](#Credits)
+  [License](#License)
+  [Deployed link](#Deployed link)
 
   # Description
   ${data.motivation}

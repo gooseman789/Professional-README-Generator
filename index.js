@@ -14,6 +14,11 @@ const questions = [
             },
             {
                 type: 'input',
+                message: 'What is the name of your project?',
+                name: 'title'
+            },
+            {
+                type: 'input',
                 message: 'What was your motivation?',
                 name: 'motivation'
             },
@@ -63,6 +68,21 @@ const questions = [
                 type: 'input',
                 message: "Please put the link of your deployed application",
                 name: 'deploy'
+            }, 
+            {
+                type: 'input',
+                message: 'What is your name?',
+                name: "name"
+            },
+            {
+                type: 'input',
+                message: 'What is your Github username?',
+                name: 'GHname'
+            },
+            {
+                type: 'input',
+                message: 'Please add a link to your Github account.',
+                name: 'GHlink'
             }
          ])
          .then((data) =>
